@@ -5,5 +5,7 @@ public interface Cache<K, V> {
 
     V get(K key);
 
-    int size();
+    boolean isFull();
+
+    void setRemovalListener(RemovalListener<K, V> listener);
 }
